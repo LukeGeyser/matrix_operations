@@ -8,11 +8,48 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Margin="20,20,20,20" Background="Aquamarine">
+    <Grid Margin="20,20,20,20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="400"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="350"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Homeadadaddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" Grid.ColumnSpan="20"/>
+        <RelativePanel Grid.Column="0" 
+                       Grid.Row="0"                        
+                       Background="AliceBlue">
+            <TextBlock Name="Rows" Text="Rows:" 
+                       Margin="0,15,0,0"/>
+            <ComboBox Name="RowsComboBox"
+                      RelativePanel.RightOf="Rows"
+                      Margin="10,10,0,0"
+                      SelectionChanged="RowsComboBox_SelectionChanged">
+                <x:String>1</x:String>
+                <x:String>2</x:String>
+                <x:String>3</x:String>
+            </ComboBox>
+
+            <TextBlock Name="Columns" Text="Columns:" 
+                       Margin="50,15,0,0"
+                       RelativePanel.RightOf="RowsComboBox"/>
+            <ComboBox Name="ColumnsComboBox"
+                      RelativePanel.RightOf="Columns"
+                      Margin="10,10,0,0"
+                      SelectionChanged="ColumnsComboBox_SelectionChanged">
+                <x:String>1</x:String>
+                <x:String>2</x:String>
+                <x:String>3</x:String>
+            </ComboBox>
+            
+        </RelativePanel>
+        <RelativePanel Grid.Column="0" 
+                       Grid.Row="1"                        
+                       Background="Azure">
+            <Frame Name="MatrixRowColumn"></Frame>
+        </RelativePanel>
     </Grid>
 </Page>

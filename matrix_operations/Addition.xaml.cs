@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -25,6 +26,28 @@ namespace matrix_operations
         public Addition()
         {
             this.InitializeComponent();
+        }
+
+        private void RowsComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (RowsComboBox.SelectedItem.ToString() == "1")
+            {
+
+                Debug.WriteLine("1");
+            }
+            else if (RowsComboBox.SelectedItem.ToString() == "2")
+            {
+                Debug.WriteLine("2");
+            }
+            else if (RowsComboBox.SelectedItem.ToString() == "3")
+            {
+                Debug.WriteLine("3");
+            }
+        }
+
+        private void ColumnsComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

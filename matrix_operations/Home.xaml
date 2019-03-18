@@ -8,11 +8,26 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Margin="20,20,20,20" Background="Aquamarine">
+    <Grid Margin="20,20,20,20" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="400"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="350"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Homeadadaddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" Grid.ColumnSpan="20"/>
+        <RelativePanel Grid.Column="1" 
+                       Grid.Row="2"
+                       HorizontalAlignment="Stretch" 
+                       Margin="0,0,0,0" 
+                       VerticalAlignment="Stretch" 
+                       
+                       Background="AliceBlue">
+            <TextBlock Text="Home" />
+            
+        </RelativePanel>
     </Grid>
 </Page>
