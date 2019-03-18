@@ -87,24 +87,7 @@ namespace matrix_operations
         }
 
         private async void DisplayContent()
-        {
-            //ContentDialog content = new ContentDialog()
-            //{
-            //    Title = "Exit Application",
-            //    Content = "Do you you want to Exit the Application",
-            //    PrimaryButtonText = "Yes",
-            //    SecondaryButtonText = "No"             
-            //};
-            //ContentDialogResult dialogResult = await content.ShowAsync();
-            //if (dialogResult == ContentDialogResult.Primary)
-            //{
-            //    Application.Current.Exit();
-            //}
-            //else if (dialogResult == ContentDialogResult.Secondary)
-            //{
-            //    ExitBoxItem.IsSelected = false;
-            //}
-
+        {           
             CustomDialog dialog = new CustomDialog();
             await dialog.ShowAsync();
 

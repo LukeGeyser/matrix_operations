@@ -10,9 +10,9 @@
 
     <Grid Margin="20,20,20,20" >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="335"/>
             <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="335"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
