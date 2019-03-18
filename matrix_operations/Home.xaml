@@ -8,7 +8,11 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <TextBlock Text="Home"/>
+    <Grid Margin="20,20,20,20" Background="Aquamarine">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Homeadadaddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" Grid.ColumnSpan="20"/>
     </Grid>
 </Page>
