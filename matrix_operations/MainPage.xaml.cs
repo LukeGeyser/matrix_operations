@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -25,6 +26,86 @@ namespace matrix_operations
         public MainPage()
         {
             this.InitializeComponent();
+            MyFrame.Navigate(typeof(Home));
+            TitleTextBlock.Text = "Home";
+            BackButton.Visibility = Visibility.Collapsed;
+            IconsListBox.SelectedItem = IconsListBox.Items[0];
         }
+
+        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+        }
+
+        private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (HomeListBoxItem.IsSelected)
+            {
+                BackButton.Visibility = Visibility.Collapsed;
+                MyFrame.Navigate(typeof(Home));
+                TitleTextBlock.Text = "Home";
+                if (MySplitView.IsPaneOpen)
+                {
+                    HamburgerButton_Click(this, new RoutedEventArgs());
+                }
+                
+            }
+            else if (AdditionListBoxItem.IsSelected)
+            {
+                BackButton.Visibility = Visibility.Visible;
+                MyFrame.Navigate(typeof(Addition));
+                TitleTextBlock.Text = "Matrix Addition";
+                if (MySplitView.IsPaneOpen)
+                {
+                    HamburgerButton_Click(this, new RoutedEventArgs());
+                }
+            }
+            else if (SubtractionListBoxItem.IsSelected)
+            {
+                BackButton.Visibility = Visibility.Visible;
+                MyFrame.Navigate(typeof(Subtraction));
+                TitleTextBlock.Text = "Matrix Subtraction";
+                if (MySplitView.IsPaneOpen)
+                {
+                    HamburgerButton_Click(this, new RoutedEventArgs());
+                }
+            }
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {            
+            IconsListBox.SelectedItem = IconsListBox.Items[0];
+        }
+
+        private void ExitListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (ExitBoxItem.IsSelected)
+            {
+                Debug.WriteLine("Exited Application");
+                DisplayContent();
+            }            
+        }
+
+        private async void DisplayContent()
+        {
+            ContentDialog content = new ContentDialog()
+            {
+                Title = "Exit Application",
+                Content = "Do you you want to Exit the Application",
+                PrimaryButtonText = "Yes",
+                SecondaryButtonText = "No"             
+            };
+            ContentDialogResult dialogResult = await content.ShowAsync();
+            if (dialogResult == ContentDialogResult.Primary)
+            {
+                Application.Current.Exit();
+            }
+            else if (dialogResult == ContentDialogResult.Secondary)
+            {
+                ExitBoxItem.IsSelected = false;
+            }
+            
+        }
+
     }
 }
