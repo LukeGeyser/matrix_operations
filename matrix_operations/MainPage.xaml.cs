@@ -70,6 +70,16 @@ namespace matrix_operations
                     HamburgerButton_Click(this, new RoutedEventArgs());
                 }
             }
+            else if (MultiplicationListBoxItem.IsSelected)
+            {
+                BackButton.Visibility = Visibility.Visible;
+                MyFrame.Navigate(typeof(Multiplication));
+                TitleTextBlock.Text = "Matrix Multiplication";
+                if (MySplitView.IsPaneOpen)
+                {
+                    HamburgerButton_Click(this, new RoutedEventArgs());
+                }
+            }
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

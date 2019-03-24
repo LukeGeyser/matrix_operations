@@ -47,38 +47,7 @@
             </ComboBox>
 
         </RelativePanel>
-        <!-- End of Left Hand Matrix Options -->
-        
-        <!-- Right Hand Matrix Options -->
-        <!--
-        <RelativePanel Grid.Column="3" 
-                       Grid.Row="0">
-            <TextBlock Name="RowsRight" Text="Rows:" 
-                       Margin="0,15,0,0"/>
-            <ComboBox Name="RowsComboBoxRight"
-                      RelativePanel.RightOf="RowsRight"
-                      Margin="10,10,0,0"
-                      SelectionChanged="RowsComboBoxRight_SelectionChanged">
-                <x:String>1</x:String>
-                <x:String>2</x:String>
-                <x:String>3</x:String>
-            </ComboBox>
-
-            <TextBlock Name="ColumnsRight" Text="Columns:" 
-                       Margin="50,15,0,0"
-                       RelativePanel.RightOf="RowsComboBoxRight"/>
-            <ComboBox Name="ColumnsComboBoxRight"
-                      RelativePanel.RightOf="ColumnsRight"
-                      Margin="10,10,0,0"
-                      SelectionChanged="ColumnsComboBoxRight_SelectionChanged">
-                <x:String>1</x:String>
-                <x:String>2</x:String>
-                <x:String>3</x:String>
-            </ComboBox>
-
-        </RelativePanel>
-        -->
-        <!-- End of Right Hand Matrix Options -->
+        <!-- End of Left Hand Matrix Options -->               
 
         <RelativePanel Grid.Column="1"
                        Grid.Row="1">
