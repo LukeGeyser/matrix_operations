@@ -48,9 +48,9 @@
 
         </RelativePanel>
         <!-- End of Left Hand Matrix Options -->
-
+        
         <!-- Right Hand Matrix Options -->
-
+        <!--
         <RelativePanel Grid.Column="3" 
                        Grid.Row="0">
             <TextBlock Name="RowsRight" Text="Rows:" 
@@ -77,6 +77,7 @@
             </ComboBox>
 
         </RelativePanel>
+        -->
         <!-- End of Right Hand Matrix Options -->
 
         <RelativePanel Grid.Column="1"
@@ -95,7 +96,7 @@
                 <RelativePanel Grid.Column="1"
                                Grid.Row="1">
                     <TextBlock FontFamily="Segoe MDL2 Assets"
-                               Text="&#xE109;"
+                               Text="&#xE108;"
                                FontSize="56"
                                RelativePanel.AlignHorizontalCenterWithPanel="True"
                                RelativePanel.AlignVerticalCenterWithPanel="True"/>

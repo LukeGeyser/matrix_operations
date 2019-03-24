@@ -45,7 +45,7 @@
         <SplitView Name="MySplitView" 
                    Grid.Row="1" 
                    DisplayMode="CompactOverlay" 
-                   OpenPaneLength="200" 
+                   OpenPaneLength="230" 
                    CompactPaneLength="56" 
                    HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Stretch">
 
@@ -94,6 +94,18 @@
 
                         </ListBoxItem>
 
+                        <ListBoxItem Name="MultiplicationListBoxItem" Margin="0,20,0,0">
+
+                            <StackPanel Orientation="Horizontal">
+
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xEA39;"/>
+
+                                <TextBlock Text="Multiplication" FontSize="24" Margin="20,0,0,0"/>
+
+                            </StackPanel>
+
+                        </ListBoxItem>
+
 
 
                     </ListBox>
@@ -106,7 +118,7 @@
 
                             <StackPanel Orientation="Horizontal">
 
-                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xEA39;"/>
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE711;"/>
 
                                 <TextBlock Text="Quit" FontSize="24" Margin="20,0,0,0"/>
 

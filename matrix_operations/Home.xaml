@@ -8,26 +8,31 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Margin="20,20,20,20" >
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="335"/>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="335"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="350"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <RelativePanel Grid.Column="1" 
-                       Grid.Row="2"
-                       HorizontalAlignment="Stretch" 
+    <ScrollViewer>
+        <Grid Margin="20,20,20,20" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <RelativePanel
+                       Grid.Row="0"
+                       HorizontalAlignment="Center" 
                        Margin="0,0,0,0" 
-                       VerticalAlignment="Stretch" 
-                       
-                       Background="AliceBlue">
-            <TextBlock Text="Home" />
-            
-        </RelativePanel>
-    </Grid>
+                       VerticalAlignment="Center" >
+                <TextBlock TextWrapping="Wrap" FontSize="32" FontWeight="SemiBold">
+                    <Underline>Matrix Operations</Underline>
+                </TextBlock>
+            </RelativePanel>
+            <RelativePanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="335"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="335"/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+                
+            </RelativePanel>
+        </Grid>
+    </ScrollViewer>
 </Page>

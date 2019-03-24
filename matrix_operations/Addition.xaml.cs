@@ -23,6 +23,7 @@ namespace matrix_operations
     /// </summary>
     public sealed partial class Addition : Page
     {
+        #region Variables
         public string row;
         public string column;
 
@@ -33,6 +34,7 @@ namespace matrix_operations
         public int[,] leftMatrixTemp;
         public int[,] rightMatrix;
         public int[,] rightMatrixTemp;
+        #endregion
 
         public Addition()
         {            
@@ -89,104 +91,6 @@ namespace matrix_operations
             r0c2.Visibility = Visibility.Collapsed;
             r1c2.Visibility = Visibility.Collapsed;
             r2c2.Visibility = Visibility.Collapsed;
-
-            if (rows == "1" || rows == null)
-            {
-                if (columns == null || columns == "1")
-                {
-                    r0c0.Visibility = Visibility.Visible;                    
-                }
-                else if (columns == "2")
-                {
-                    r0c0.Visibility = Visibility.Visible;
-                    r0c1.Visibility = Visibility.Visible;
-                }
-                else if (columns == "3")
-                {
-                    r0c0.Visibility = Visibility.Visible;
-                    r0c1.Visibility = Visibility.Visible;
-                    r0c2.Visibility = Visibility.Visible;
-                }
-            }
-            else if (rows == "2")
-            {
-                if (columns == null || columns == "1")
-                {
-                    r0c0.Visibility = Visibility.Visible;
-                    r1c0.Visibility = Visibility.Visible;
-                }
-                else if (columns == "2")
-                {
-                    r0c0.Visibility = Visibility.Visible;
-                    r1c0.Visibility = Visibility.Visible;
-                    r0c1.Visibility = Visibility.Visible;
-                    r1c1.Visibility = Visibility.Visible;
-                }
-                else if (columns == "3")
-                {
-                    r0c0.Visibility = Visibility.Visible;
-                    r1c0.Visibility = Visibility.Visible;
-                    r0c1.Visibility = Visibility.Visible;
-                    r1c1.Visibility = Visibility.Visible;
-                    r0c2.Visibility = Visibility.Visible;
-                    r1c2.Visibility = Visibility.Visible;
-                }
-            }
-            else if (rows == "3")
-            {
-                if (columns == null || columns == "1")
-                {
-                    r0c0.Visibility = Visibility.Visible;
-                    r1c0.Visibility = Visibility.Visible;
-                    r2c0.Visibility = Visibility.Visible;
-                }
-                else if (columns == "2")
-                {
-                    r0c0.Visibility = Visibility.Visible;
-                    r1c0.Visibility = Visibility.Visible;
-                    r2c0.Visibility = Visibility.Visible;
-                    r0c1.Visibility = Visibility.Visible;
-                    r1c1.Visibility = Visibility.Visible;
-                    r2c1.Visibility = Visibility.Visible;
-                }
-                else if (columns == "3")
-                {
-                    r0c0.Visibility = Visibility.Visible;
-                    r1c0.Visibility = Visibility.Visible;
-                    r2c0.Visibility = Visibility.Visible;
-                    r0c1.Visibility = Visibility.Visible;
-                    r1c1.Visibility = Visibility.Visible;
-                    r2c1.Visibility = Visibility.Visible;
-                    r0c2.Visibility = Visibility.Visible;
-                    r1c2.Visibility = Visibility.Visible;
-                    r2c2.Visibility = Visibility.Visible;
-                }
-            }
-            
-        }
-
-        private void RowsComboBoxRight_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {            
-            if (columnRight == null)
-            {
-                columnRight = "1";
-            }
-            rowRight = RowsComboBoxRight.SelectedItem.ToString();
-            CheckRowsColumnsRight(rowRight, columnRight);
-        }
-
-        private void ColumnsComboBoxRight_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (rowRight == null)
-            {
-                rowRight = "1";
-            }
-            columnRight = ColumnsComboBoxRight.SelectedItem.ToString();
-            CheckRowsColumnsRight(rowRight, columnRight);
-        }
-
-        private void CheckRowsColumnsRight(string rows, string columns)
-        {
             c3r0c0.Visibility = Visibility.Collapsed;
             c3r1c0.Visibility = Visibility.Collapsed;
             c3r2c0.Visibility = Visibility.Collapsed;
@@ -201,15 +105,27 @@ namespace matrix_operations
             {
                 if (columns == null || columns == "1")
                 {
+                    // left side
+                    r0c0.Visibility = Visibility.Visible;
+                    // right side
                     c3r0c0.Visibility = Visibility.Visible;
                 }
                 else if (columns == "2")
                 {
-                    c3r0c0.Visibility = Visibility.Visible;
-                    c3r0c1.Visibility = Visibility.Visible;
+                    // left side
+                    r0c0.Visibility = Visibility.Visible;
+                    r0c1.Visibility = Visibility.Visible;
+                    // right side
+                    r0c0.Visibility = Visibility.Visible;
+                    r0c1.Visibility = Visibility.Visible;
                 }
                 else if (columns == "3")
                 {
+                    // left side
+                    r0c0.Visibility = Visibility.Visible;
+                    r0c1.Visibility = Visibility.Visible;
+                    r0c2.Visibility = Visibility.Visible;
+                    // right side
                     c3r0c0.Visibility = Visibility.Visible;
                     c3r0c1.Visibility = Visibility.Visible;
                     c3r0c2.Visibility = Visibility.Visible;
@@ -219,11 +135,21 @@ namespace matrix_operations
             {
                 if (columns == null || columns == "1")
                 {
+                    // left side
+                    r0c0.Visibility = Visibility.Visible;
+                    r1c0.Visibility = Visibility.Visible;
+                    // right side
                     c3r0c0.Visibility = Visibility.Visible;
                     c3r1c0.Visibility = Visibility.Visible;
                 }
                 else if (columns == "2")
                 {
+                    // left side
+                    r0c0.Visibility = Visibility.Visible;
+                    r1c0.Visibility = Visibility.Visible;
+                    r0c1.Visibility = Visibility.Visible;
+                    r1c1.Visibility = Visibility.Visible;
+                    // right side
                     c3r0c0.Visibility = Visibility.Visible;
                     c3r1c0.Visibility = Visibility.Visible;
                     c3r0c1.Visibility = Visibility.Visible;
@@ -231,6 +157,14 @@ namespace matrix_operations
                 }
                 else if (columns == "3")
                 {
+                    // left side
+                    r0c0.Visibility = Visibility.Visible;
+                    r1c0.Visibility = Visibility.Visible;
+                    r0c1.Visibility = Visibility.Visible;
+                    r1c1.Visibility = Visibility.Visible;
+                    r0c2.Visibility = Visibility.Visible;
+                    r1c2.Visibility = Visibility.Visible;
+                    // right side
                     c3r0c0.Visibility = Visibility.Visible;
                     c3r1c0.Visibility = Visibility.Visible;
                     c3r0c1.Visibility = Visibility.Visible;
@@ -243,12 +177,25 @@ namespace matrix_operations
             {
                 if (columns == null || columns == "1")
                 {
+                    // left side
+                    r0c0.Visibility = Visibility.Visible;
+                    r1c0.Visibility = Visibility.Visible;
+                    r2c0.Visibility = Visibility.Visible;
+                    // right side
                     c3r0c0.Visibility = Visibility.Visible;
                     c3r1c0.Visibility = Visibility.Visible;
                     c3r2c0.Visibility = Visibility.Visible;
                 }
                 else if (columns == "2")
                 {
+                    // left side 
+                    r0c0.Visibility = Visibility.Visible;
+                    r1c0.Visibility = Visibility.Visible;
+                    r2c0.Visibility = Visibility.Visible;
+                    r0c1.Visibility = Visibility.Visible;
+                    r1c1.Visibility = Visibility.Visible;
+                    r2c1.Visibility = Visibility.Visible;
+                    // right side
                     c3r0c0.Visibility = Visibility.Visible;
                     c3r1c0.Visibility = Visibility.Visible;
                     c3r2c0.Visibility = Visibility.Visible;
@@ -258,6 +205,17 @@ namespace matrix_operations
                 }
                 else if (columns == "3")
                 {
+                    // left side 
+                    r0c0.Visibility = Visibility.Visible;
+                    r1c0.Visibility = Visibility.Visible;
+                    r2c0.Visibility = Visibility.Visible;
+                    r0c1.Visibility = Visibility.Visible;
+                    r1c1.Visibility = Visibility.Visible;
+                    r2c1.Visibility = Visibility.Visible;
+                    r0c2.Visibility = Visibility.Visible;
+                    r1c2.Visibility = Visibility.Visible;
+                    r2c2.Visibility = Visibility.Visible;
+                    // right side
                     c3r0c0.Visibility = Visibility.Visible;
                     c3r1c0.Visibility = Visibility.Visible;
                     c3r2c0.Visibility = Visibility.Visible;
@@ -269,14 +227,13 @@ namespace matrix_operations
                     c3r2c2.Visibility = Visibility.Visible;
                 }
             }
-
-        }
+            
+        }        
 
         private void CalculateResult_Click(object sender, RoutedEventArgs e)
         {
             InstantiateLeftMatrix(row, column);
-            leftMatrix = leftMatrixTemp;            
-            InstantiateRigihtMatrix(rowRight, columnRight);
+            leftMatrix = leftMatrixTemp;                        
             rightMatrix = rightMatrixTemp;
             CalculateAnswer(row, column, leftMatrix, rightMatrix);
         }
@@ -412,65 +369,6 @@ namespace matrix_operations
                     leftMatrixTemp = new int[3, 3] { { int.Parse(r0c0.Text), int.Parse(r0c1.Text), int.Parse(r0c2.Text) },
                                                      { int.Parse(r1c0.Text), int.Parse(r1c1.Text), int.Parse(r1c2.Text) },
                                                      { int.Parse(r2c0.Text), int.Parse(r2c1.Text), int.Parse(r2c2.Text) }};
-                }
-            }
-        }
-
-        private void InstantiateRigihtMatrix(string rows, string columns)
-        {
-            if (rows == "1" || rows == null)
-            {
-                if (columns == null || columns == "1")
-                {
-                    rightMatrixTemp = new int[1, 1] { { int.Parse(c3r0c0.Text) } };
-                }
-                else if (columns == "2")
-                {
-                    rightMatrixTemp = new int[1, 2] { { int.Parse(c3r0c0.Text), int.Parse(c3r0c1.Text) } };
-                }
-                else if (columns == "3")
-                {
-                    rightMatrixTemp = new int[1, 3] { { int.Parse(c3r0c0.Text), int.Parse(c3r0c1.Text), int.Parse(c3r0c2.Text) } };
-                }
-            }
-            else if (rows == "2")
-            {
-                if (columns == null || columns == "1")
-                {
-                    rightMatrixTemp = new int[2, 1] { { int.Parse(c3r0c0.Text) },
-                                                     { int.Parse(c3r1c0.Text)} };
-                }
-                else if (columns == "2")
-                {
-                    rightMatrixTemp = new int[2, 2] { { int.Parse(c3r0c0.Text), int.Parse(c3r0c1.Text) },
-                                                     { int.Parse(c3r1c0.Text), int.Parse(c3r1c1.Text) } };
-                }
-                else if (columns == "3")
-                {
-                    rightMatrixTemp = new int[2, 3] { { int.Parse(c3r0c0.Text), int.Parse(c3r0c1.Text), int.Parse(c3r0c2.Text) },
-                                                     { int.Parse(c3r1c0.Text), int.Parse(c3r1c1.Text), int.Parse(c3r1c2.Text) } };
-                }
-            }
-            else if (rows == "3")
-            {
-                if (columns == null || columns == "1")
-                {
-                    columns = "1";
-                    rightMatrixTemp = new int[3, 1] { { int.Parse(c3r0c0.Text) },
-                                                     { int.Parse(c3r1c0.Text) },
-                                                     { int.Parse(c3r2c0.Text) }};
-                }
-                else if (columns == "2")
-                {
-                    rightMatrixTemp = new int[3, 2] { { int.Parse(c3r0c0.Text), int.Parse(c3r0c1.Text) },
-                                                     { int.Parse(c3r1c0.Text), int.Parse(c3r1c1.Text) },
-                                                     { int.Parse(c3r2c0.Text), int.Parse(c3r2c1.Text) }};
-                }
-                else if (columns == "3")
-                {
-                    rightMatrixTemp = new int[3, 3] { { int.Parse(c3r0c0.Text), int.Parse(c3r0c1.Text), int.Parse(c3r0c2.Text) },
-                                                     { int.Parse(c3r1c0.Text), int.Parse(c3r1c1.Text), int.Parse(c3r1c2.Text) },
-                                                     { int.Parse(c3r2c0.Text), int.Parse(c3r2c1.Text), int.Parse(c3r2c2.Text) }};
                 }
             }
         }
