@@ -34,8 +34,6 @@ namespace matrix_operations
         public int[,] rightMatrix;
         public int[,] rightMatrixTemp;
 
-        private int[,] ResultMatric;
-
         public Addition()
         {            
             this.InitializeComponent();
