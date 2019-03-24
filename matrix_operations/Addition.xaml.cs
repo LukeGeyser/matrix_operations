@@ -57,13 +57,12 @@ namespace matrix_operations
         }
 
         private void RowsComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            row = RowsComboBox.SelectedItem.ToString();            
+        {            
             if (column == null)
             {
                 column = "1";
             }
-                       
+            row = RowsComboBox.SelectedItem.ToString();
             CheckRowsColumns(row, column);
         }
 
