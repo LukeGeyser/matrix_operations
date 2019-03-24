@@ -26,10 +26,10 @@ namespace matrix_operations
         public string row;
         public string column;
 
-        public int[,] leftMatrix;
-        public int[,] leftMatrixTemp;
-        public int[,] rightMatrix;
-        public int[,] rightMatrixTemp;
+        public double[,] leftMatrix;
+        public double[,] leftMatrixTemp;
+        public double[,] rightMatrix;
+        public double[,] rightMatrixTemp;
         #endregion
 
         public Subtraction()
@@ -236,7 +236,7 @@ namespace matrix_operations
             CalculateAnswer(row, column, leftMatrix, rightMatrix);
         }
 
-        private void CalculateAnswer(string rows, string columns, int[,] leftMatrix, int[,] rightMatrix)
+        private void CalculateAnswer(string rows, string columns, double[,] leftMatrix, double[,] rightMatrix)
         {
             if (rows == "1" || rows == null)
             {
@@ -318,33 +318,33 @@ namespace matrix_operations
             {
                 if (columns == null || columns == "1")
                 {
-                    leftMatrixTemp = new int[1, 1] { { int.Parse(r0c0.Text) } };
+                    leftMatrixTemp = new double[1, 1] { { double.Parse(r0c0.Text) } };
                 }
                 else if (columns == "2")
                 {
-                    leftMatrixTemp = new int[1, 2] { { int.Parse(r0c0.Text), int.Parse(r0c1.Text) } };
+                    leftMatrixTemp = new double[1, 2] { { double.Parse(r0c0.Text), double.Parse(r0c1.Text) } };
                 }
                 else if (columns == "3")
                 {
-                    leftMatrixTemp = new int[1, 3] { { int.Parse(r0c0.Text), int.Parse(r0c1.Text), int.Parse(r0c2.Text) } };
+                    leftMatrixTemp = new double[1, 3] { { double.Parse(r0c0.Text), double.Parse(r0c1.Text), double.Parse(r0c2.Text) } };
                 }
             }
             else if (rows == "2")
             {
                 if (columns == null || columns == "1")
                 {
-                    leftMatrixTemp = new int[2, 1] { { int.Parse(r0c0.Text) },
-                                                     { int.Parse(r1c0.Text)} };
+                    leftMatrixTemp = new double[2, 1] { { double.Parse(r0c0.Text) },
+                                                     { double.Parse(r1c0.Text)} };
                 }
                 else if (columns == "2")
                 {
-                    leftMatrixTemp = new int[2, 2] { { int.Parse(r0c0.Text), int.Parse(r0c1.Text) },
-                                                     { int.Parse(r1c0.Text), int.Parse(r1c1.Text) } };
+                    leftMatrixTemp = new double[2, 2] { { double.Parse(r0c0.Text), double.Parse(r0c1.Text) },
+                                                     { double.Parse(r1c0.Text), double.Parse(r1c1.Text) } };
                 }
                 else if (columns == "3")
                 {
-                    leftMatrixTemp = new int[2, 3] { { int.Parse(r0c0.Text), int.Parse(r0c1.Text), int.Parse(r0c2.Text) },
-                                                     { int.Parse(r1c0.Text), int.Parse(r1c1.Text), int.Parse(r1c2.Text) } };
+                    leftMatrixTemp = new double[2, 3] { { double.Parse(r0c0.Text), double.Parse(r0c1.Text), double.Parse(r0c2.Text) },
+                                                     { double.Parse(r1c0.Text), double.Parse(r1c1.Text), double.Parse(r1c2.Text) } };
                 }
             }
             else if (rows == "3")
@@ -352,21 +352,21 @@ namespace matrix_operations
                 if (columns == null || columns == "1")
                 {
                     columns = "1";
-                    leftMatrixTemp = new int[3, 1] { { int.Parse(r0c0.Text) },
-                                                     { int.Parse(r1c0.Text) },
-                                                     { int.Parse(r2c0.Text) }};
+                    leftMatrixTemp = new double[3, 1] { { double.Parse(r0c0.Text) },
+                                                     { double.Parse(r1c0.Text) },
+                                                     { double.Parse(r2c0.Text) }};
                 }
                 else if (columns == "2")
                 {
-                    leftMatrixTemp = new int[3, 2] { { int.Parse(r0c0.Text), int.Parse(r0c1.Text) },
-                                                     { int.Parse(r1c0.Text), int.Parse(r1c1.Text) },
-                                                     { int.Parse(r2c0.Text), int.Parse(r2c1.Text) }};
+                    leftMatrixTemp = new double[3, 2] { { double.Parse(r0c0.Text), double.Parse(r0c1.Text) },
+                                                     { double.Parse(r1c0.Text), double.Parse(r1c1.Text) },
+                                                     { double.Parse(r2c0.Text), double.Parse(r2c1.Text) }};
                 }
                 else if (columns == "3")
                 {
-                    leftMatrixTemp = new int[3, 3] { { int.Parse(r0c0.Text), int.Parse(r0c1.Text), int.Parse(r0c2.Text) },
-                                                     { int.Parse(r1c0.Text), int.Parse(r1c1.Text), int.Parse(r1c2.Text) },
-                                                     { int.Parse(r2c0.Text), int.Parse(r2c1.Text), int.Parse(r2c2.Text) }};
+                    leftMatrixTemp = new double[3, 3] { { double.Parse(r0c0.Text), double.Parse(r0c1.Text), double.Parse(r0c2.Text) },
+                                                     { double.Parse(r1c0.Text), double.Parse(r1c1.Text), double.Parse(r1c2.Text) },
+                                                     { double.Parse(r2c0.Text), double.Parse(r2c1.Text), double.Parse(r2c2.Text) }};
                 }
             }
         }
@@ -377,33 +377,33 @@ namespace matrix_operations
             {
                 if (columns == null || columns == "1")
                 {
-                    rightMatrixTemp = new int[1, 1] { { int.Parse(c3r0c0.Text) } };
+                    rightMatrixTemp = new double[1, 1] { { double.Parse(c3r0c0.Text) } };
                 }
                 else if (columns == "2")
                 {
-                    rightMatrixTemp = new int[1, 2] { { int.Parse(c3r0c0.Text), int.Parse(c3r0c1.Text) } };
+                    rightMatrixTemp = new double[1, 2] { { double.Parse(c3r0c0.Text), double.Parse(c3r0c1.Text) } };
                 }
                 else if (columns == "3")
                 {
-                    rightMatrixTemp = new int[1, 3] { { int.Parse(c3r0c0.Text), int.Parse(c3r0c1.Text), int.Parse(c3r0c2.Text) } };
+                    rightMatrixTemp = new double[1, 3] { { double.Parse(c3r0c0.Text), double.Parse(c3r0c1.Text), double.Parse(c3r0c2.Text) } };
                 }
             }
             else if (rows == "2")
             {
                 if (columns == null || columns == "1")
                 {
-                    rightMatrixTemp = new int[2, 1] { { int.Parse(c3r0c0.Text) },
-                                                     { int.Parse(c3r1c0.Text)} };
+                    rightMatrixTemp = new double[2, 1] { { double.Parse(c3r0c0.Text) },
+                                                     { double.Parse(c3r1c0.Text)} };
                 }
                 else if (columns == "2")
                 {
-                    rightMatrixTemp = new int[2, 2] { { int.Parse(c3r0c0.Text), int.Parse(c3r0c1.Text) },
-                                                     { int.Parse(c3r1c0.Text), int.Parse(c3r1c1.Text) } };
+                    rightMatrixTemp = new double[2, 2] { { double.Parse(c3r0c0.Text), double.Parse(c3r0c1.Text) },
+                                                     { double.Parse(c3r1c0.Text), double.Parse(c3r1c1.Text) } };
                 }
                 else if (columns == "3")
                 {
-                    rightMatrixTemp = new int[2, 3] { { int.Parse(c3r0c0.Text), int.Parse(c3r0c1.Text), int.Parse(c3r0c2.Text) },
-                                                     { int.Parse(c3r1c0.Text), int.Parse(c3r1c1.Text), int.Parse(c3r1c2.Text) } };
+                    rightMatrixTemp = new double[2, 3] { { double.Parse(c3r0c0.Text), double.Parse(c3r0c1.Text), double.Parse(c3r0c2.Text) },
+                                                     { double.Parse(c3r1c0.Text), double.Parse(c3r1c1.Text), double.Parse(c3r1c2.Text) } };
                 }
             }
             else if (rows == "3")
@@ -411,21 +411,21 @@ namespace matrix_operations
                 if (columns == null || columns == "1")
                 {
                     columns = "1";
-                    rightMatrixTemp = new int[3, 1] { { int.Parse(c3r0c0.Text) },
-                                                     { int.Parse(c3r1c0.Text) },
-                                                     { int.Parse(c3r2c0.Text) }};
+                    rightMatrixTemp = new double[3, 1] { { double.Parse(c3r0c0.Text) },
+                                                     { double.Parse(c3r1c0.Text) },
+                                                     { double.Parse(c3r2c0.Text) }};
                 }
                 else if (columns == "2")
                 {
-                    rightMatrixTemp = new int[3, 2] { { int.Parse(c3r0c0.Text), int.Parse(c3r0c1.Text) },
-                                                     { int.Parse(c3r1c0.Text), int.Parse(c3r1c1.Text) },
-                                                     { int.Parse(c3r2c0.Text), int.Parse(c3r2c1.Text) }};
+                    rightMatrixTemp = new double[3, 2] { { double.Parse(c3r0c0.Text), double.Parse(c3r0c1.Text) },
+                                                     { double.Parse(c3r1c0.Text), double.Parse(c3r1c1.Text) },
+                                                     { double.Parse(c3r2c0.Text), double.Parse(c3r2c1.Text) }};
                 }
                 else if (columns == "3")
                 {
-                    rightMatrixTemp = new int[3, 3] { { int.Parse(c3r0c0.Text), int.Parse(c3r0c1.Text), int.Parse(c3r0c2.Text) },
-                                                     { int.Parse(c3r1c0.Text), int.Parse(c3r1c1.Text), int.Parse(c3r1c2.Text) },
-                                                     { int.Parse(c3r2c0.Text), int.Parse(c3r2c1.Text), int.Parse(c3r2c2.Text) }};
+                    rightMatrixTemp = new double[3, 3] { { double.Parse(c3r0c0.Text), double.Parse(c3r0c1.Text), double.Parse(c3r0c2.Text) },
+                                                     { double.Parse(c3r1c0.Text), double.Parse(c3r1c1.Text), double.Parse(c3r1c2.Text) },
+                                                     { double.Parse(c3r2c0.Text), double.Parse(c3r2c1.Text), double.Parse(c3r2c2.Text) }};
                 }
             }
         }

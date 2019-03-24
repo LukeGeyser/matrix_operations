@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -24,7 +25,7 @@ namespace matrix_operations
     public sealed partial class MainPage : Page
     {
         public MainPage()
-        {
+        {            
             this.InitializeComponent();
             MyFrame.Navigate(typeof(Home));
             TitleTextBlock.Text = "Home";
@@ -112,5 +113,11 @@ namespace matrix_operations
 
         }
 
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            ApplicationView.PreferredLaunchViewSize = new Size(900, 750);
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(500, 500));
+        }
     }
 }
