@@ -26,23 +26,22 @@
                     RelativePanel.AlignLeftWithPanel="True"/>
 
             <Button Name="BackButton" 
-                    Background="White"
                     RelativePanel.RightOf="HamburgerButton"
-                    FontFamily="Segoe MDL2 Assets" 
-                    Content="&#xE0C4;" 
-                    FontSize="36" 
-                    Click="BackButton_Click"/>
+                    FontFamily="Segoe MDL2 Assets"
+                    Content="&#xE0C4;"
+                    FontSize="36"
+                    Click="BackButton_Click" />
 
             <TextBlock Name="TitleTextBlock"                        
                        RelativePanel.RightOf="BackButton"
                        FontSize="28"
                        FontWeight="Bold"
                        Text="Hello World"
-                       Margin="20,5,0,0"/>
+                       Margin="20,5,0,0" />
 
         </RelativePanel>
 
-        <SplitView Name="MySplitView" 
+        <SplitView Name="MySplitView"
                    Grid.Row="1" 
                    DisplayMode="CompactOverlay" 
                    OpenPaneLength="230" 
