@@ -15,17 +15,21 @@
                 <TextBlock FontFamily="Segoe MDL2 Assets" 
                            Text="&#xE814;" 
                            Margin="0,2,0,0"
-                           FontSize="40"
-                           />
+                           FontSize="40"/>
+                
                 <TextBlock Text="Input Error"
                            Margin="15,0,0,0"
-                           FontSize="28"/>
+                           FontSize="28"
+                           FontWeight="Bold"/>
             </StackPanel>
         </DataTemplate>
     </ContentDialog.TitleTemplate>
 
     <StackPanel>
-        <TextBlock Text="Please make sure you fill in all the input fields"/>
+        <TextBlock Text="Please make sure you fill in all the input fields and that your inputs are of the correct format" 
+                   TextWrapping="WrapWholeWords"
+                   TextAlignment="Center"
+                   FontSize="15"/>
     </StackPanel>
 
 </ContentDialog>

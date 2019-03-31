@@ -423,7 +423,7 @@ namespace matrix_operations
 
         private void CalculateResult_Click(object sender, RoutedEventArgs e)
         {
-            if (CheckForNull() == false)
+            try
             {
                 InstantiateLeftMatrix(row, column);
                 leftMatrix = leftMatrixTemp;
@@ -431,9 +431,13 @@ namespace matrix_operations
                 rightMatrix = rightMatrixTemp;
                 CalculateAnswer(row, column, rowRight, columnRight, leftMatrix, rightMatrix);
             }
-            else if (CheckForNull() == true)
+            catch (FormatException)
             {
                 MainPage.ShowNullCustomDialogAsync();
+            }
+            catch (Exception)
+            {
+                MainPage.ShowUnexpectedErrorAysnc();
             }
         }
 
@@ -526,23 +530,6 @@ namespace matrix_operations
                     Rr2c1.Text = (resultMatrix[2, 1]).ToString();
                     Rr2c2.Text = (resultMatrix[2, 2]).ToString();
                 }
-            }
-        }
-
-        private bool CheckForNull()
-        {
-            if (r0c0.Text == "" || r0c0.Text == null || r1c0.Text == "" || r1c0.Text == null || r2c0.Text == "" || r2c0.Text == null ||
-                r0c1.Text == "" || r0c1.Text == null || r1c1.Text == "" || r1c1.Text == null || r2c1.Text == "" || r2c1.Text == null ||
-                r0c2.Text == "" || r0c2.Text == null || r1c2.Text == "" || r1c2.Text == null || r2c2.Text == "" || r2c2.Text == null ||
-                c3r0c0.Text == "" || c3r0c0.Text == null || c3r1c0.Text == "" || c3r1c0.Text == null || c3r2c0.Text == "" || c3r2c0.Text == null ||
-                c3r0c1.Text == "" || c3r0c1.Text == null || c3r1c1.Text == "" || c3r1c1.Text == null || c3r2c1.Text == "" || c3r2c1.Text == null ||
-                c3r0c2.Text == "" || c3r0c2.Text == null || c3r1c2.Text == "" || c3r1c2.Text == null || c3r2c2.Text == "" || c3r2c2.Text == null)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
             }
         }
 

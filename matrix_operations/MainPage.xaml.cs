@@ -130,5 +130,15 @@ namespace matrix_operations
             }
         }
 
+        public static async void ShowUnexpectedErrorAysnc()
+        {
+            UnexpectedErrorDialog dialog = new UnexpectedErrorDialog();
+            await dialog.ShowAsync();
+            if (dialog.unexpectedErrorResult == UnexpectedErrorResult.Close)
+            {
+                return;
+            }
+        }
+
     }
 }

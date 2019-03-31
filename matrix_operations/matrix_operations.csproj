@@ -141,6 +141,9 @@
     <Compile Include="Subtraction.xaml.cs">
       <DependentUpon>Subtraction.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UnexpectedErrorDialog.xaml.cs">
+      <DependentUpon>UnexpectedErrorDialog.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -188,6 +191,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Subtraction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UnexpectedErrorDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
