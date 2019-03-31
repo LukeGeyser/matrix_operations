@@ -36,7 +36,6 @@
                        RelativePanel.RightOf="BackButton"
                        FontSize="28"
                        FontWeight="Bold"
-                       Text="Hello World"
                        Margin="20,5,0,0" />
 
         </RelativePanel>

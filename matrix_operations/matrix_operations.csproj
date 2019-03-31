@@ -152,10 +152,23 @@
     <None Include="matrix_operations_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Images\github.png" />
+    <Content Include="Assets\Images\gmail.png" />
+    <Content Include="Assets\PackageAppXManifest\1240x600.scale-200.png" />
+    <Content Include="Assets\PackageAppXManifest\150x150logo.png" />
+    <Content Include="Assets\PackageAppXManifest\176x176logo.png" />
+    <Content Include="Assets\PackageAppXManifest\300x300logo.scale-100.png" />
+    <Content Include="Assets\PackageAppXManifest\300x300logo.scale-200.png" />
+    <Content Include="Assets\PackageAppXManifest\300x300logo.scale-400.png" />
+    <Content Include="Assets\PackageAppXManifest\44x44logo.png" />
+    <Content Include="Assets\PackageAppXManifest\50x50logo.scale-100.png" />
+    <Content Include="Assets\PackageAppXManifest\600x600logo.png" />
+    <Content Include="Assets\PackageAppXManifest\88x88logo.scale-100.png" />
+    <Content Include="Assets\PackageAppXManifest\88x88logo.scale-200.png" />
+    <Content Include="Assets\PackageAppXManifest\88x88logo.scale-400.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
-    <Content Include="Assets\Square150x150Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
@@ -204,6 +217,7 @@
       <Version>6.2.3</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

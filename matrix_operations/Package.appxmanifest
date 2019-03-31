@@ -1,48 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
-<Package
-  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-  IgnorableNamespaces="uap mp">
-
-  <Identity
-    Name="e2b3ed71-1cfa-4fe1-bbca-a726b272db66"
-    Publisher="CN=User-pc"
-    Version="1.0.0.0" />
-
-  <mp:PhoneIdentity PhoneProductId="e2b3ed71-1cfa-4fe1-bbca-a726b272db66" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
-
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="e2b3ed71-1cfa-4fe1-bbca-a726b272db66" Publisher="CN=User-pc" Version="1.0.0.0" />
+  <mp:PhoneIdentity PhoneProductId="e2b3ed71-1cfa-4fe1-bbca-a726b272db66" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>matrix_operations</DisplayName>
-    <PublisherDisplayName>User-pc</PublisherDisplayName>
-    <Logo>Assets\StoreLogo.png</Logo>
+    <PublisherDisplayName>Luke Geyser</PublisherDisplayName>
+    <Logo>Assets\PackageAppXManifest\50x50logo.png</Logo>
   </Properties>
-
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
   </Dependencies>
-
   <Resources>
-    <Resource Language="x-generate"/>
+    <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
-    <Application Id="App"
-      Executable="$targetnametoken$.exe"
-      EntryPoint="matrix_operations.App">
-      <uap:VisualElements
-        DisplayName="matrix_operations"
-        Square150x150Logo="Assets\Square150x150Logo.png"
-        Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="matrix_operations"
-        BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
-        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="matrix_operations.App">
+      <uap:VisualElements DisplayName="Matrix Operations" Square150x150Logo="Assets\PackageAppXManifest\300x300logo.png" Square44x44Logo="Assets\PackageAppXManifest\88x88logo.png" Description="This app allows a user to enter values for a matrix (up to a 3x3 matrix) and the app will calculate your results based on what operation you have chosen, such operations include Addition, Subtraction and Multiplication. Furthermore, Operations such as Determinant, Transpose and Inverse will be available in the near future." BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="Matrix Operations">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="Assets\PackageAppXManifest\1240x600.png" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait" />
+          <uap:Rotation Preference="landscape" />
+          <uap:Rotation Preference="portraitFlipped" />
+        </uap:InitialRotationPreference>
       </uap:VisualElements>
     </Application>
   </Applications>
-
   <Capabilities>
     <Capability Name="internetClient" />
   </Capabilities>

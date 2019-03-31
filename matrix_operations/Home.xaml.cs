@@ -25,6 +25,19 @@ namespace matrix_operations
         public Home()
         {
             this.InitializeComponent();
+            if (Application.Current.RequestedTheme == ApplicationTheme.Dark)
+            {
+                HeaderBorder.BorderBrush = new SolidColorBrush(Windows.UI.Colors.White);
+                StackPanelBorder.BorderBrush = new SolidColorBrush(Windows.UI.Colors.White);
+            }
+            else if (Application.Current.RequestedTheme == ApplicationTheme.Light)
+            {
+                HeaderBorder.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Black);
+                StackPanelBorder.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Black);
+            }
         }
+
+
+
     }
 }

@@ -11,27 +11,118 @@
     <ScrollViewer>
         <Grid Margin="20,20,20,20" >
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <RelativePanel
-                       Grid.Row="0"
-                       HorizontalAlignment="Center" 
-                       Margin="0,0,0,0" 
-                       VerticalAlignment="Center" >
-                <TextBlock TextWrapping="Wrap" FontSize="32" FontWeight="SemiBold">
-                    <Underline>Matrix Operations</Underline>
+
+            <RelativePanel Grid.Row="1" Margin="0,0,1,20">
+                <Border x:Name="HeaderBorder"
+                        BorderThickness="1"
+                        Height="200"
+                        Width="800">
+                    <TextBlock Text="MATRIX OPERATIONS"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               FontSize="56"
+                               FontWeight="Bold"/>
+                </Border>
+                <TextBlock Name="AboutText"
+                           FontWeight="Bold"
+                           Margin="0,60,0,0"
+                           FontSize="26"
+                           RelativePanel.Below="HeaderBorder"
+                           RelativePanel.AlignHorizontalCenterWithPanel="True">
+                    <Underline>What Does This App Do?</Underline>
                 </TextBlock>
-            </RelativePanel>
-            <RelativePanel>
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="335"/>
-                        <ColumnDefinition Width="100"/>
-                        <ColumnDefinition Width="335"/>
-                    </Grid.ColumnDefinitions>
-                </Grid>
-                
+                <TextBlock Name="AboutTextContent"
+                           Margin="0,20,0,0"
+                           FontSize="14"
+                           TextWrapping="WrapWholeWords"
+                           FontStyle="Italic"
+                           Width="500"
+                           TextAlignment="Center"
+                           RelativePanel.Below="AboutText"
+                           RelativePanel.AlignHorizontalCenterWithPanel="True">
+                    This app will allow a person to perform the basic Matrix Operations, such as Addition, Subtraction and Multiplication.
+                    For now these are the only Three operations that the app offers but at later stages in the near future operations such as
+                    getting the determinants and the inverse of a Matrix will be available.
+                </TextBlock>
+
+                <TextBlock Name="HowToText"
+                           FontWeight="Bold"
+                           Margin="0,60,0,0"
+                           FontSize="26"
+                           RelativePanel.Below="AboutTextContent"
+                           RelativePanel.AlignHorizontalCenterWithPanel="True">
+                    <Underline>How to Use this App</Underline>
+                </TextBlock>
+                <TextBlock Name="HowToTextContent"
+                           Margin="0,20,0,0"
+                           FontSize="14"
+                           TextWrapping="WrapWholeWords"
+                           FontStyle="Italic"
+                           Width="500"
+                           TextAlignment="Center"
+                           RelativePanel.Below="HowToText"
+                           RelativePanel.AlignHorizontalCenterWithPanel="True">
+                    <Bold><Underline>Addition</Underline></Bold> : Once you Navigate to the Addition Tab, you will be able to choose your Columns and Rows,
+                    once you select a row or column it will add for both sides since in a Addition Operation it is 
+                    required that both Matrixes be the exact same size, so that is taken care of.
+                    Make sure to Fill in all boxes you see on screen, and once you are ready to Calculate your answer, click the "Calculate Result" 
+                    Button to see your results.
+                    <LineBreak />
+                    <LineBreak />
+                    <Bold><Underline>Subtraction</Underline></Bold> : Simarly, with the Subtraction Operation, Once you Navigate to the Subtraction Tab, 
+                    you will be able to choose your Columns and Rows,
+                    once you select a row or column it will add for both sides since in a Subtraction Operation it is 
+                    required that both Matrixes be the exact same size, so that is taken care of.
+                    Make sure to Fill in all boxes you see on screen, and once you are ready to Calculate your answer, click the "Calculate Result" 
+                    Button to see your results.
+                    <LineBreak />
+                    <LineBreak />
+                    <Bold><Underline>Multiplication</Underline></Bold> : In the case of Multiplication, you have option to select the size of the left and 
+                    right matrix, but in Multiplication Operations it is required that the columns of the left matrix must be equal to the rows of the 
+                    right matrix.
+                    Make sure to Fill in all boxes you see on screen, and once you are ready to Calculate your answer, click the "Calculate Result" 
+                    Button to see your results.
+                </TextBlock>
+                <Border x:Name="StackPanelBorder"
+                        BorderThickness="1"
+                        Width="800"
+                        Height="100"
+                        RelativePanel.Below="HowToTextContent"
+                        RelativePanel.AlignHorizontalCenterWithPanel="True"
+                        Margin="0,40,0,0">
+                    <StackPanel Orientation="Horizontal" 
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center">
+                        <Image Source="Assets/Images/gmail.png" 
+                               Width="25"
+                               Height="25"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Margin="20,0,20,0"/>
+                        <TextBlock HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   TextAlignment="Center"
+                                   Margin="20,0,20,0">
+                        Email Address : 
+                        <LineBreak/>
+                            <Underline>geyserlg@gmail.com</Underline>
+                        </TextBlock>
+
+                        <Image Source="Assets/Images/github.png" 
+                               Width="25"
+                               Height="25"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Margin="20,0,20,0"/>
+                        <TextBlock HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Margin="20,0,20,0">
+                            <Hyperlink NavigateUri="https://github.com/LukeGeyser">GitHub Profile</Hyperlink>
+                        </TextBlock>
+                    </StackPanel>
+                </Border>
             </RelativePanel>
         </Grid>
     </ScrollViewer>
