@@ -128,6 +128,9 @@
     <Compile Include="Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
+    <Compile Include="InputIsNullCustomDialog.xaml.cs">
+      <DependentUpon>InputIsNullCustomDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -169,6 +172,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InputIsNullCustomDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

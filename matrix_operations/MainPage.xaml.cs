@@ -119,5 +119,16 @@ namespace matrix_operations
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(500, 500));
         }
+
+        public static async void ShowNullCustomDialogAsync()
+        {
+            InputIsNullCustomDialog dialog = new InputIsNullCustomDialog();
+            await dialog.ShowAsync();
+            if (dialog.nullDialogResult == NullDialogResult.Retry)
+            {
+                return;
+            }
+        }
+
     }
 }
